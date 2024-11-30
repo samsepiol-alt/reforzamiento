@@ -1,0 +1,29 @@
+<form method="post">
+
+    {% csrf_token %}
+  
+    <input type="text" name="username" placeholder="Nombre de usuario" required />
+  
+    <input type="email" name="email" placeholder="Correo electrónico" required />
+  
+    <input type="password" name="password" placeholder="Contraseña" required />
+  
+    <input type="text" name="first_name" placeholder="Nombre" />
+  
+    <input type="text" name="last_name" placeholder="Apellido" />
+  
+    <input type="date" name="date_of_birth" placeholder="Fecha de nacimiento" />
+  
+    <input type="text" name="city" placeholder="Ciudad" />
+  
+    <select name="role">
+  
+      <option value="student">Estudiante</option>
+  
+      <option value="instructor">Instructor</option>
+  
+    </select>
+  
+    <button type="submit">Registrarse</button>
+  
+  </form>
