@@ -1,0 +1,46 @@
+[
+
+    {
+
+        "model": "courses.course",
+
+        "pk": 1,
+
+        "fields": {
+
+            "title": "Curso de Python",
+
+            "description": "Aprende Python desde cero",
+
+            "duration": 40,
+
+            "created_at": "2024-01-01T12:00:00Z"
+
+        }
+
+    },
+
+    {
+
+        "model": "courses.course",
+
+        "pk": 2,
+
+        "fields": {
+
+            "title": "Curso de Django",
+
+            "description": "Construye aplicaciones web con Django",
+
+            "duration": 60,
+
+            "created_at": "2024-01-01T12:00:00Z"
+
+        }
+
+    }
+
+]
+
+
+

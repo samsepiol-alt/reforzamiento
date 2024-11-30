@@ -1,0 +1,30 @@
+<h1>Crear Curso</h1>
+
+<form method="post">
+
+  {% csrf_token %}
+
+  <input type="text" name="title" placeholder="Título del curso" required />
+
+  <textarea name="description" placeholder="Descripción" required></textarea>
+
+  <input
+
+    type="number"
+
+    name="duration"
+
+    placeholder="Duración en horas"
+
+    required
+
+  />
+
+  <button type="submit">Crear Curso</button>
+
+</form>
+
+<a href="{% url 'course_list' %}">Volver al listado de cursos</a>
+
+
+

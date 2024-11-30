@@ -1,0 +1,20 @@
+<h1>Listado de Cursos</h1>
+
+<ul>
+
+  {% for course in courses %}
+
+  <li>
+
+    {{ course.title }} - {{ course.description }} ({{ course.duration }} horas)
+
+  </li>
+
+  {% endfor %}
+
+</ul>
+
+<a href="{% url 'create_course' %}">Crear un nuevo curso</a>
+
+
+
