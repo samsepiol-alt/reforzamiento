@@ -1,17 +1,76 @@
-<form method="post">
+<!-- Importar el archivo base.html -->
 
-    {% csrf_token %}
-  
-    <input type="text" name="username" placeholder="Nombre de usuario" required />
-  
-    <input type="password" name="password" placeholder="Contraseña" required />
-  
-    <button type="submit">Iniciar Sesión</button>
-  
-  </form>
-  
-  {% if error %}
-  
-  <p style="color: red">{{ error }}</p>
-  
-  {% endif %}
+{% extends 'base.html' %}
+
+ 
+
+<!-- Define el título de la página -->
+
+{% block title %}Iniciar Sesión{% endblock %}
+
+ 
+
+<!-- Define el contenido de la página -->
+
+{% block content %}
+
+<h1 class="text-center">Iniciar Sesión</h1>
+
+<form method="post" class="mx-auto" style="max-width: 400px">
+
+  <!-- Incluye el token de seguridad -->
+
+  {% csrf_token %}
+
+  <div class="mb-3">
+
+    <label for="username" class="form-label">Nombre de Usuario</label>
+
+    <input
+
+      type="text"
+
+      class="form-control"
+
+      id="username"
+
+      name="username"
+
+      required
+
+    />
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="password" class="form-label">Contraseña</label>
+
+    <input
+
+      type="password"
+
+      class="form-control"
+
+      id="password"
+
+      name="password"
+
+      required
+
+    />
+
+  </div>
+
+  <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+
+</form>
+
+ 
+
+<!-- Fin del bloque de contenido -->
+
+{% endblock %}
+
+
+

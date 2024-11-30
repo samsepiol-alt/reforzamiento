@@ -1,20 +1,64 @@
-<h1>Listado de Cursos</h1>
+<!-- Importar el archivo base.html -->
 
-<ul>
+{% extends 'base.html' %}
+
+ 
+
+<!-- Define el título de la página -->
+
+{% block title %}Listado de Cursos{% endblock %}
+
+ 
+
+<!-- Define el contenido de la página -->
+
+{% block content %}
+
+<div class="row">
 
   {% for course in courses %}
 
-  <li>
+  <div class="col-md-4">
 
-    {{ course.title }} - {{ course.description }} ({{ course.duration }} horas)
+    <div class="card">
 
-  </li>
+      <div class="card-body">
+
+        <h5 class="card-title">{{ course.title }}</h5>
+
+        <p class="card-text">{{ course.description }}</p>
+
+        <p class="card-text">
+
+          <small class="text-muted"
+
+            >Duración: {{ course.duration }} horas</small
+
+          >
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
 
   {% endfor %}
 
-</ul>
+</div>
 
-<a href="{% url 'create_course' %}">Crear un nuevo curso</a>
+<a href="{% url 'create_course' %}" class="btn btn-success mt-3"
+
+  >Crear un nuevo curso</a
+
+>
+
+ 
+
+<!-- Fin del bloque de contenido -->
+
+{% endblock %}
 
 
 

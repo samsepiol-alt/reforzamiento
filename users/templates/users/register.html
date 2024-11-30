@@ -1,29 +1,84 @@
-<form method="post">
+<!-- Importa el archivo base.html -->
 
-    {% csrf_token %}
-  
-    <input type="text" name="username" placeholder="Nombre de usuario" required />
-  
-    <input type="email" name="email" placeholder="Correo electrónico" required />
-  
-    <input type="password" name="password" placeholder="Contraseña" required />
-  
-    <input type="text" name="first_name" placeholder="Nombre" />
-  
-    <input type="text" name="last_name" placeholder="Apellido" />
-  
-    <input type="date" name="date_of_birth" placeholder="Fecha de nacimiento" />
-  
-    <input type="text" name="city" placeholder="Ciudad" />
-  
-    <select name="role">
-  
-      <option value="student">Estudiante</option>
-  
-      <option value="instructor">Instructor</option>
-  
-    </select>
-  
-    <button type="submit">Registrarse</button>
-  
-  </form>
+{% extends 'base.html' %}
+
+ 
+
+<!-- Define el título de la página -->
+
+{% block title %}Registro de Usuario{% endblock %}
+
+ 
+
+<!-- Define el contenido de la página -->
+
+{% block content %}
+
+<h1 class="text-center">Registro de Usuario</h1>
+
+<form method="post" class="mx-auto" style="max-width: 400px">
+
+  <!-- Incluye el token de seguridad -->
+
+  {% csrf_token %}
+
+  <div class="mb-3">
+
+    <label for="username" class="form-label">Nombre de Usuario</label>
+
+    <input
+
+      type="text"
+
+      class="form-control"
+
+      id="username"
+
+      name="username"
+
+      required
+
+    />
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="email" class="form-label">Correo Electrónico</label>
+
+    <input type="email" class="form-control" id="email" name="email" required />
+
+  </div>
+
+
+
+  <div class="mb-3">
+
+    <label for="password" class="form-label">Contraseña</label>
+
+    <input
+
+      type="password"
+
+      class="form-control"
+
+      id="password"
+
+      name="password"
+
+      required
+
+    />
+
+  </div>
+
+  <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+
+</form>
+
+<!-- Fin del bloque de contenido -->
+
+{% endblock %}
+
+
+
